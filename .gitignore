@@ -1,0 +1,6 @@
+/apilocadora/appsettings.json
+/apilocadora/bin
+/apilocadora/obj
+/apilocadora.tests/bin
+/apilocadora.tests/obj
+.vscode/*

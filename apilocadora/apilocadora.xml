@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>apilocadora</name>
+    </assembly>
+    <members>
+        <member name="M:apilocadora.Controllers.V1.LoginController.AuthUserAsync(apilocadora.Data.Models.InputModel.Login)">
+            <summary>
+            Verifica Informaçõs de login.
+            </summary>
+            <response code="200">Retorna token de autenticação do usuario.</response>
+            <response code="400">Usuario não autenticado, pois algum campo requirido não foi informado.</response>
+            <response code="401">Acesso negado as credenciais estão incorretas</response>
+            <response code="404">Acesso negado usuario não encontrado</response>
+        </member>
+        <member name="M:apilocadora.Controllers.V1.LoginController.RegisterUserAsync(apilocadora.Data.Models.InputModel.Register)">
+            <summary>
+            Registra Novos usuarios.
+            </summary>
+            <response code="200">Novo usuario foi cadastrado e o token foi retornado.</response>
+            <response code="400">As senhas não conferem, ou algum campo requerido não foi informado</response>
+            <response code="401">Retornado quando o acesso foi negado pois o login esta incorreto ou usuario já esta cadastrado.</response>
+        </member>
+        <member name="M:apilocadora.Controllers.V1.VeiculoController.GetVehicleByIdAsync(System.Guid)">
+            <summary>
+            Busca um veiculo pelo id.
+            </summary>
+            <param name="idVeiculo">Id do veiculo procurado.</param>
+            <response code="200">Retorna o veiculo procurado.</response>
+            <response code="400">Campos requeridos não foram informados</response>
+            <response code="401">O token de autenticação não foi informado ou é invalido.</response>
+            <response code="404">Caso não exista um veiculo com esse Id.</response>
+        </member>
+        <member name="M:apilocadora.Controllers.V1.VeiculoController.GetVehicleByPlateNumberAsync(apilocadora.Data.Models.Validations.VeiculoQueryParameters)">
+            <summary>
+            Busca um veiculo pelo número da placa.
+            </summary>
+            <response code="200">Retorna o veiculo procurado.</response>
+            <response code="400">Campos requeridos não foram informados ou não são validos</response>
+            <response code="401">O token de autenticação não foi informado ou é invalido.</response>
+            <response code="404">Caso não exista um veiculo com essa placa</response>
+        </member>
+    </members>
+</doc>
